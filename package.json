@@ -1,0 +1,68 @@
+{
+  "name": "mern-client-setup",
+  "version": "0.1.0",
+  "description": "MaterialUI/Express/Redux/NextJS Boilerplate Setup",
+  "engines": {
+    "npm": ">=6.4.1",
+    "node": ">=8.14.0"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "saga",
+    "express",
+    "materialui",
+    "nextjs",
+    "boilerplate",
+    "starter-kit"
+  ],
+  "author": "Aakash Goel <se.aakashgoel@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aakash-Goel/mern-client-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aakash-Goel/mern-client-setup/issues"
+  },
+  "homepage": "https://github.com/Aakash-Goel/mern-client-setup#readme",
+  "scripts": {
+    "dev": "node ./server/index.js",
+    "build": "next build ./app",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "helmet": "^3.15.1",
+    "ip": "^1.1.5",
+    "lodash": "^4.17.11",
+    "next": "^7.0.3",
+    "next-redux-saga": "^3.0.0",
+    "next-redux-wrapper": "^3.0.0-alpha.0",
+    "next-routes": "^1.4.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-jss": "^8.6.1",
+    "react-redux": "^6.0.0",
+    "react-tap-event-plugin": "^3.0.3",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.0.1",
+    "reselect": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
+  }
+}
