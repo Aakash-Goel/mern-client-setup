@@ -27,13 +27,28 @@
   },
   "homepage": "https://github.com/Aakash-Goel/mern-client-setup#readme",
   "scripts": {
-    "dev": "node ./server/index.js",
+    "build:clean": "npm run test:clean && rimraf ./build",
+    "prestart": "npm run build:clean",
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development node ./server/index.js",
+    "prebuild": "npm run build:clean",
     "build": "next build ./app",
-    "start": "next start"
+    "start:prod": "npm run build:clean && npm run build && npm run prod",
+    "prod": "cross-env NODE_ENV=production node ./server/index.js",
+    "preformat": "npm run lint:check",
+    "format": "prettier-eslint --write",
+    "lint": "npm run lint:js",
+    "lint:check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
+    "lint:eslint": "eslint --ext .jsx,.js --ignore-path .eslintignore",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:js:fix": "npm run lint:eslint -- . --fix",
+    "pretest": "npm run test:clean",
+    "test:clean": "rimraf ./coverage"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "compression": "^1.7.3",
+    "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "helmet": "^3.15.1",
     "ip": "^1.1.5",
@@ -63,6 +78,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.16.4"
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "prettier-eslint-cli": "^4.7.1",
+    "rimraf": "^2.6.3"
   }
 }

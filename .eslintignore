@@ -3,6 +3,7 @@ coverage
 docs
 snapshots
 dist
+build
 node_modules
 log
 logs

@@ -1,6 +1,7 @@
 const router = require('./routes');
 
 const initExport = {
+  distDir: '../build',
   // webpack: (config, { dev, isServer }) => {
   webpack: (config, { dev }) => {
     // const prod = !dev;
