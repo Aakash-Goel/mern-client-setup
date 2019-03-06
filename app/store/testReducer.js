@@ -1,3 +1,12 @@
+/**
+ * testReducer.js
+ *
+ * This is just a test reducer.
+ *
+ * >>>Delete this file.
+ *
+ */
+
 const ADD = 'ADD';
 const TICK = 'TICK';
 

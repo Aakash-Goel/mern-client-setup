@@ -1,3 +1,10 @@
+/**
+ * muiKit.js
+ *
+ * This is the main MUI file where all the common styles resides
+ *
+ */
+
 const drawerWidth = 260;
 
 const transition = {
@@ -11,6 +18,7 @@ const conatinerFluid = {
   marginLeft: 'auto',
   width: '100%',
 };
+
 const container = {
   ...conatinerFluid,
   '@media (min-width: 576px)': {

@@ -1,3 +1,16 @@
+/**
+ * _app.js
+ *
+ * Next.js uses the App component to initialize pages. You can override it and control the page initialization.
+ *
+ * For more info, check out
+ * https://github.com/zeit/next.js#custom-app
+ *
+ */
+
+/**
+ * Module dependencies.
+ */
 import App, { Container } from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';

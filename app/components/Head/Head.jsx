@@ -1,7 +1,23 @@
+/**
+ * Head.jsx
+ *
+ * This is an HOC wrapper for all your meta tags
+ *
+ * Single place where you can control your application meta/title tags
+ *
+ */
+
+/**
+ * Module dependencies.
+ */
 import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
 
+/**
+ * Type checking - Define prop types
+ * @private
+ */
 const propTypes = {
   title: string,
   description: string,
@@ -9,6 +25,10 @@ const propTypes = {
   ogImage: string,
 };
 
+/**
+ * Define default prop values
+ * @private
+ */
 const defaultProps = {
   title: '',
   description: '',
@@ -16,6 +36,15 @@ const defaultProps = {
   ogImage: '',
 };
 
+/**
+ * Head
+ * A React functional component
+ * @public
+ *
+ * @param {Object} props
+ *
+ * @returns {Object} React Component
+ */
 const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
@@ -41,4 +70,8 @@ const Head = props => (
 Head.propTypes = propTypes;
 Head.defaultProps = defaultProps;
 
+/**
+ * Module exports.
+ * @public
+ */
 export default Head;

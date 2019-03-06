@@ -1,5 +1,16 @@
+/**
+ * next.config.js
+ *
+ * next.js configuration goes here
+ *
+ */
+
 const router = require('./routes');
 
+/**
+ * Module variables.
+ * @public
+ */
 const initExport = {
   distDir: '../build',
   // webpack: (config, { dev, isServer }) => {
@@ -37,4 +48,8 @@ if (process.env.STATIC_EXPORT) {
   };
 }
 
+/**
+ * Module exports.
+ * @public
+ */
 module.exports = initExport;

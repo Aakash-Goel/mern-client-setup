@@ -1,3 +1,17 @@
+/**
+ * _document.js
+ *
+ * _document is only rendered on the server side and not on the client side
+ * Is used to change the initial server side rendered document markup
+ *
+ * For more info, check out
+ * https://github.com/zeit/next.js#custom-document
+ *
+ */
+
+/**
+ * Module dependencies.
+ */
 import React, { Fragment } from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { SheetsRegistry } from 'jss';
@@ -8,15 +22,14 @@ import {
   createGenerateClassName,
   createMuiTheme,
 } from '@material-ui/core/styles';
+
 import muiTheme from '../styles/theme/muiTheme';
-
-// import styles from '../styles'; // eslint-disable-line no-unused-vars
 import catchErrors from '../utils/errorBoundary';
-// import preloadAssets from '../utils/preloadAssets';
 
-// import cssIncludes from '../styles/cssIncludes';
-// import { PHONE, MOBILE, DESKTOP, WEB_FONT_PATHS } from '../constants';
-
+/**
+ * Module variables.
+ * @private
+ */
 const theme = createMuiTheme({ ...muiTheme });
 
 export default class MyDocument extends Document {
@@ -26,6 +39,7 @@ export default class MyDocument extends Document {
     const generateClassName = createGenerateClassName();
     // Create a sheetsManager instance.
     const sheetsManager = new Map();
+    // Create App instance.
     const page = renderPage(App => props => (
       <JssProvider
         registry={sheetsRegistry}
@@ -36,7 +50,7 @@ export default class MyDocument extends Document {
         </MuiThemeProvider>
       </JssProvider>
     ));
-    // Grab the CSS from our sheetsRegistry.
+    // Grab CSS from our sheetsRegistry.
     const css = sheetsRegistry.toString();
 
     return {
@@ -56,8 +70,6 @@ export default class MyDocument extends Document {
 
   render() {
     const Content = catchErrors(Main);
-    // const { styleTags } = this.props;
-    // const preLoadFonts = WEB_FONT_PATHS || [];
 
     return (
       <html lang="en">

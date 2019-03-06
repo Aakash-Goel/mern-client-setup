@@ -7,7 +7,6 @@ const routes = require('next-routes')();
 //
 // If you want to change url (for SEO or put different path), please add your route below.
 //
-//
 // Please add your route between of comments
 //
 // ------------ ROUTES ---------------
@@ -18,4 +17,8 @@ routes.add('signin', '/sign_in');
 //
 //
 
+/**
+ * Module exports.
+ * @public
+ */
 module.exports = routes;
