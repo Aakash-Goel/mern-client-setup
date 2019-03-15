@@ -1,7 +1,7 @@
 {
   "*.{js,jsx}": [
     "eslint",
-    "format",
+    "prettier-eslint --write",
     "git add"
   ]
 }
