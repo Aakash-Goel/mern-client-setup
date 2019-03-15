@@ -2,7 +2,7 @@
  * next.config.js
  *
  * next.js configuration goes here
- *
+ * gdgf
  */
 
 const router = require('./routes');
